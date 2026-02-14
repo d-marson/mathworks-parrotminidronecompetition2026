@@ -1,0 +1,162 @@
+# MATLAB/Simulink GitIgnore Configuration
+# For Parrot Minidrone Competition 2026
+
+# ============================================================================
+# SIMULINK CACHE AND TEMPORARY FILES (DO NOT COMMIT)
+# ============================================================================
+
+# Simulink cache files (.slxc) - contain compiled model data
+# These should be regenerated on each machine
+*.slxc
+
+# Simulink autosave files
+*.autosave
+
+# Simulink Code Generation
+slprj/               # Simulink cache folder (root level)
+**/slprj/            # Simulink cache folder (any subdirectory)
+work/slprj/          # Simulink cache folder (work directory - explicit)
+work/
+*.slxp               # Simulink protected files
+sccprj/              # Source control integration
+
+# Code generation artifacts
+codegen/             # Code generation output
+ert_main.c
+*.tmw
+
+# ============================================================================
+# MATLAB TEMPORARY FILES
+# ============================================================================
+
+# MATLAB autosave
+*.asv
+
+# MATLAB crash dump files
+matlab_crash_dump.*
+
+# MATLAB session info
+*.lic
+
+# ============================================================================
+# PROJECT-SPECIFIC GENERATED FILES
+# ============================================================================
+
+# Workspace variables (regenerated from scripts)
+# Uncomment if you want to ignore workspace files
+# *.mat
+
+# Keep specific MAT files that are part of the project config
+!modelParrot.mat
+!sensorCalibration.mat
+!Position_Attitude_Reference.mat
+!Position_Reference.mat
+!cmdData.mat
+
+# Log files
+*.log
+*.txt
+
+# But keep documentation text files
+!LICENSE.txt
+!README.txt
+
+# ============================================================================
+# BUILD AND COMPILATION
+# ============================================================================
+
+# Compiler outputs
+*.o
+*.obj
+*.exe
+*.out
+*.mex*
+
+# Build directories
+build/
+dist/
+
+# ============================================================================
+# SYSTEM FILES
+# ============================================================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# ============================================================================
+# IDE AND EDITOR FILES
+# ============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================================================================
+# DOCUMENTATION (Keep these!)
+# ============================================================================
+
+# Keep all markdown files
+!*.md
+
+# Keep PDF documentation
+!*.pdf
+
+# ============================================================================
+# CUSTOM ADDITIONS
+# ============================================================================
+
+# Temporary analysis outputs in claude directory
+claude/*.txt
+!claude/README.md
+
+# Personal notes (if any)
+notes/
+scratch/
+temp/
+
+# ============================================================================
+# EXCEPTIONS - IMPORTANT FILES TO KEEP
+# ============================================================================
+
+# Keep all Simulink models (*.slx, *.mdl)
+!*.slx
+!*.mdl
+
+# Keep MATLAB project file
+!*.prj
+
+# Keep all MATLAB scripts and functions
+!*.m
+
+# Keep library files
+!*.sldd
+
+# Keep data dictionary
+!*.sldd

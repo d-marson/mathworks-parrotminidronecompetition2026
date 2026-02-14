@@ -1,0 +1,94 @@
+# Git Attributes for MATLAB/Simulink Projects
+# For Parrot Minidrone Competition 2026
+
+# ============================================================================
+# SIMULINK MODEL FILES (.slx, .mdl) - BINARY FORMAT
+# ============================================================================
+
+# Simulink SLX files are ZIP archives containing XML
+# Treat as binary but enable merge with Simulink's 3-way merge
+*.slx binary merge=mlAutoMerge
+*.mdl binary merge=mlAutoMerge
+
+# Simulink library files
+*.sldd binary merge=mlAutoMerge
+
+# ============================================================================
+# MATLAB PROJECT FILES
+# ============================================================================
+
+# MATLAB project files (XML-based but treat as binary for safety)
+*.prj binary merge=mlAutoMerge
+
+# ============================================================================
+# MATLAB CODE FILES - TEXT FORMAT
+# ============================================================================
+
+# MATLAB scripts and functions (text files)
+*.m text eol=lf
+
+# MATLAB live scripts
+*.mlx binary
+
+# MATLAB apps
+*.mlapp binary
+
+# ============================================================================
+# DATA FILES
+# ============================================================================
+
+# MAT files are binary
+*.mat binary
+
+# Excel files
+*.xlsx binary
+*.xls binary
+
+# ============================================================================
+# DOCUMENTATION
+# ============================================================================
+
+# Markdown files
+*.md text eol=lf
+
+# Text files
+*.txt text eol=lf
+
+# PDF files
+*.pdf binary
+
+# ============================================================================
+# SIMULINK RESOURCE FILES
+# ============================================================================
+
+# XML files (Simulink uses these for resources)
+*.xml text eol=lf
+
+# ============================================================================
+# LINE ENDING NORMALIZATION
+# ============================================================================
+
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout
+*.h text eol=lf
+*.c text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+
+# Shell scripts
+*.sh text eol=lf
+
+# Batch scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# ============================================================================
+# DIFF CONFIGURATION
+# ============================================================================
+
+# Use Simulink's comparison tool for models (if available)
+*.slx diff=slx
+*.mdl diff=mdl
